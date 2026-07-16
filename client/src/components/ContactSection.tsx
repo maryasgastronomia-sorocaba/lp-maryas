@@ -1,20 +1,8 @@
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
-import { MapView } from '@/components/Map';
-import { useEffect, useRef } from 'react';
 
 export default function ContactSection() {
-  const mapRef = useRef<HTMLDivElement>(null);
-  const latitude = -23.4945;
-  const longitude = -47.4552;
-
-  const handleMapReady = (map: google.maps.Map) => {
-    // Add marker
-    new google.maps.Marker({
-      position: { lat: latitude, lng: longitude },
-      map: map,
-      title: 'Maryas Espeto Bar',
-    });
-  };
+  const mapsLink = 'https://www.google.com/maps/dir//Maryas+Espeto+Gourmet+(Marias),+Av.+Pereira+da+Silva,+1623+-+Jardim+Santa+Ros%C3%A1lia,+Sorocaba+-+SP,+18095-340/@-23.4848256,-46.6419712,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94cf61493a12ec7d:0x323d58cc0a38908a!2m2!1d-47.4418081!2d-23.4849344?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D';
+  const mapImageUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310419663029034863/WXFjhInlUNRXeQvs.png';
 
   return (
     <section id="contact-section" className="py-20 bg-white">
@@ -130,12 +118,19 @@ export default function ContactSection() {
 
           {/* Map */}
           <div className="rounded-lg overflow-hidden shadow-lg h-80 lg:h-full min-h-96">
-            <MapView 
-              initialCenter={{ lat: latitude, lng: longitude }}
-              initialZoom={15}
-              onMapReady={handleMapReady}
-              className="h-full w-full"
-            />
+            <a 
+              href={mapsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full h-full hover:opacity-90 transition-opacity duration-300 cursor-pointer"
+              title="Clique para abrir no Google Maps"
+            >
+              <img 
+                src={mapImageUrl}
+                alt="Localização do Marya's Espeto Bar no Google Maps"
+                className="w-full h-full object-cover"
+              />
+            </a>
           </div>
         </div>
       </div>
