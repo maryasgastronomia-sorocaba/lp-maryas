@@ -12,7 +12,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
  * - Authentic and welcoming atmosphere
  */
 export default function Home() {
-  const logoUrl = '/manus-storage/logomaryas_c4f9ae0d.jpg';
+  const logoUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310419663029034863/HmyojdflmwgWGaru.jpeg';
   const heroImageUrl = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663663843456/dhZTTByFMYSzB5qwGwh86x/hero-espetos-Xyv4gVQMJviPvdr56Tm9d5.webp';
 
   return (
